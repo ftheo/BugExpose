@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let notificationCenter = NSNotificationCenter.defaultCenter()
-        notificationCenter.addObserver(self, selector: "initSync:", name: MyCustomNotification, object: nil)
+        notificationCenter.addObserver(self, selector: "initS:", name: MyCustomNotification, object: nil)
         
         var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("update"), userInfo: nil, repeats: false)
     }
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         NSNotificationCenter.defaultCenter().postNotificationName(MyCustomNotification, object: nil)
     }
 
-    func initSync(notification: NSNotification) {
+    func initS(notification: NSNotification) {
         println("Got notification")
     }
 
